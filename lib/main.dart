@@ -1,4 +1,6 @@
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
@@ -17,10 +19,17 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red[600]
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(40.0),
-        child: Text("This is padding"),),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          const Text("Row 1 Text widgets",
+          style: TextStyle(color: Colors.deepPurple,fontSize: 16),),
+          TextButton(onPressed: (){}, child: const Text("Row 2 Button")),
+          Container(padding: const EdgeInsets.all(12.0),color: Colors.amber,child: const Text("Row 3 Container"),)
 
+        ],
+      ),
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],
