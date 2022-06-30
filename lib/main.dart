@@ -16,18 +16,54 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: const Text('my first app'),
-          centerTitle: true,
+          //centerTitle: true,
+          titleSpacing: 80.0,
+
           backgroundColor: Colors.red[600]
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end ,
         children: <Widget>[
-          const Text("Row 1 Text widgets",
-          style: TextStyle(color: Colors.deepPurple,fontSize: 16),),
-          TextButton(onPressed: (){}, child: const Text("Row 2 Button")),
-          Container(padding: const EdgeInsets.all(12.0),color: Colors.amber,child: const Text("Row 3 Container"),)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                child: const Text(" Row 1"),
+                color: Colors.black12,
+                padding: EdgeInsets.all(40.0),
+              ),
 
+              Container(
+                child: const Text("Row 2"),
+                color: Colors.blue,
+                padding: EdgeInsets.all(30.0),
+              ),
+
+              Container(
+                child: const Text("Row 3"),
+                color: Colors.lightBlue,
+                padding: EdgeInsets.all(20.0),
+              )
+            ],
+          ),
+          Container(
+            child: const Text("Column 1"),
+            color: Colors.amberAccent,
+            padding: EdgeInsets.all(20.0),
+          ),
+
+          Container(
+            child: const Text("Column 2"),
+            color: Colors.deepPurple,
+            padding: EdgeInsets.all(30.0),
+          ),
+
+          Container(
+            child: const Text("Column 3"),
+            color: Colors.deepOrange,
+            padding: EdgeInsets.all(40.0),
+          )
         ],
       ),
 
