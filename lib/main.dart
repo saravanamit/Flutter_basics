@@ -1,67 +1,53 @@
-
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+
 
 void main() => runApp( const MaterialApp(
-  home: Home(),
+  home:Card(),
 ));
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Card extends StatelessWidget {
+  const Card({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('my first app'),
-          //centerTitle: true,
-          titleSpacing: 80.0,
+        backgroundColor: Colors.grey[700],
+        title: const Text("ID card"),
+        centerTitle: true,
 
-          backgroundColor: Colors.red[600]
       ),
-      body: Row(
-        children: [
-            Expanded(
-              flex: 1,
-                child: Image.asset("assets/flutter.png")),
-            Expanded(
-              flex: 3,
-              child: Container(
-                height: 100,
-                padding: EdgeInsets.all(2),
-                color: Colors.cyan,
-                child: Center(child: Text("Flex box 1")),
+      backgroundColor: Colors.white,
+      body:
+          Column(
+            children: [
+              SizedBox(height: 50,),
+              Center(child: CircleAvatar(radius: 50.0,backgroundImage:AssetImage("assets/flutter.png"))),
+              Container(child: Divider(thickness: 2.0,color: Colors.grey[700],height: 20.0,),),
+
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text("Name",style: TextStyle(color: Colors.cyan[800],fontSize: 15.0,letterSpacing: 1.0,)),
+                  Text("Saravanakumar T",style: TextStyle(color: Colors.blueGrey,fontSize: 15.0,letterSpacing: 1.0,)),
+                ],
               ),
-            ) ,
-          Expanded(
-            flex: 1,
-            child: Container(
-              height: 100,
-              padding: EdgeInsets.all(2),
-              color: Colors.redAccent,
-              child: Center(child: Text("Flex box 2")),
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              height: 100,
-              padding: EdgeInsets.all(2),
-              color: Colors.amber,
-              child: Center(child: Text("Flex box 3")),
-            ),
-          ),
 
-        ],
-      ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text("Employee No." ,style: TextStyle(color: Colors.cyan[800],fontSize: 15.0,letterSpacing: 1.0,)),
+                  Text("655",style: TextStyle(color: Colors.blueGrey,fontSize: 15.0,letterSpacing: 1.0,)),
+                ],
+              ),
 
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.red[600],
-        onPressed: () {  },
-        child: const Text('click'),
+
+          ],
       ),
     );
   }
 }
+
+
+
