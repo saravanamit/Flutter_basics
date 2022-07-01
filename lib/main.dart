@@ -21,49 +21,39 @@ class Home extends StatelessWidget {
 
           backgroundColor: Colors.red[600]
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end ,
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                child: const Text(" Row 1"),
-                color: Colors.black12,
-                padding: EdgeInsets.all(40.0),
+      body: Row(
+        children: [
+            Expanded(
+              flex: 1,
+                child: Image.asset("assets/flutter.png")),
+            Expanded(
+              flex: 3,
+              child: Container(
+                height: 100,
+                padding: EdgeInsets.all(2),
+                color: Colors.cyan,
+                child: Center(child: Text("Flex box 1")),
               ),
-
-              Container(
-                child: const Text("Row 2"),
-                color: Colors.blue,
-                padding: EdgeInsets.all(30.0),
-              ),
-
-              Container(
-                child: const Text("Row 3"),
-                color: Colors.lightBlue,
-                padding: EdgeInsets.all(20.0),
-              )
-            ],
+            ) ,
+          Expanded(
+            flex: 1,
+            child: Container(
+              height: 100,
+              padding: EdgeInsets.all(2),
+              color: Colors.redAccent,
+              child: Center(child: Text("Flex box 2")),
+            ),
           ),
-          Container(
-            child: const Text("Column 1"),
-            color: Colors.amberAccent,
-            padding: EdgeInsets.all(20.0),
-          ),
-
-          Container(
-            child: const Text("Column 2"),
-            color: Colors.deepPurple,
-            padding: EdgeInsets.all(30.0),
+          Expanded(
+            flex: 2,
+            child: Container(
+              height: 100,
+              padding: EdgeInsets.all(2),
+              color: Colors.amber,
+              child: Center(child: Text("Flex box 3")),
+            ),
           ),
 
-          Container(
-            child: const Text("Column 3"),
-            color: Colors.deepOrange,
-            padding: EdgeInsets.all(40.0),
-          )
         ],
       ),
 
@@ -75,20 +65,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-//
-// Container
-//
-// Container(
-//        color: Colors.amber,
-//        padding: const EdgeInsets.all(20.0),
-//        margin: const EdgeInsets.fromLTRB(40.0, 30.0, 90.0, 10.0),
-//        child: const Text("This is Container"),
-//      ),
-//
-//
-//
-//
-//
-//
-//
