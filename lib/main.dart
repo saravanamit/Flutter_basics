@@ -21,50 +21,52 @@ class Home extends StatelessWidget {
 
           backgroundColor: Colors.red[600]
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end ,
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                child: const Text(" Row 1"),
-                color: Colors.black12,
-                padding: EdgeInsets.all(40.0),
-              ),
+      body: SizedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end ,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  child: const Text(" Row 1"),
+                  color: Colors.black12,
+                  padding: EdgeInsets.all(40.0),
+                ),
 
-              Container(
-                child: const Text("Row 2"),
-                color: Colors.blue,
-                padding: EdgeInsets.all(30.0),
-              ),
+                Container(
+                  child: const Text("Row 2"),
+                  color: Colors.blue,
+                  padding: EdgeInsets.all(30.0),
+                ),
 
-              Container(
-                child: const Text("Row 3"),
-                color: Colors.lightBlue,
-                padding: EdgeInsets.all(20.0),
-              )
-            ],
-          ),
-          Container(
-            child: const Text("Column 1"),
-            color: Colors.amberAccent,
-            padding: EdgeInsets.all(20.0),
-          ),
+                Container(
+                  child: const Text("Row 3"),
+                  color: Colors.lightBlue,
+                  padding: EdgeInsets.all(20.0),
+                )
+              ],
+            ),
+            Container(
+              child: const Text("Column 1"),
+              color: Colors.amberAccent,
+              padding: EdgeInsets.all(20.0),
+            ),
 
-          Container(
-            child: const Text("Column 2"),
-            color: Colors.deepPurple,
-            padding: EdgeInsets.all(30.0),
-          ),
+            Container(
+              child: const Text("Column 2"),
+              color: Colors.deepPurple,
+              padding: EdgeInsets.all(30.0),
+            ),
 
-          Container(
-            child: const Text("Column 3"),
-            color: Colors.deepOrange,
-            padding: EdgeInsets.all(40.0),
-          )
-        ],
+            Container(
+              child: const Text("Column 3"),
+              color: Colors.deepOrange,
+              padding: EdgeInsets.all(40.0),
+            )
+          ],
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
