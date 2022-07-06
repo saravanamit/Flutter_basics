@@ -23,24 +23,45 @@ class _QuotesState extends State<Quotes> {
 */
 
   List<CustomQuotes> quotes = [
-    CustomQuotes('Be yourself; everyone else is already taken','Oscar Wilde'),
-    CustomQuotes('I have nothing to declare except my genius','Oscar Wilde'),
-    CustomQuotes('The truth is rarely pure and never simple','Oscar Wilde')
+    CustomQuotes('Be yourself; everyone else is already taken', 'Oscar Wilde'),
+    CustomQuotes('I have nothing to declare except my genius', 'Oscar Wilde'),
+    CustomQuotes('The truth is rarely pure and never simple', 'Oscar Wilde')
   ];
+
+  Widget quotes_Card(CustomQuotes quote) {
+    return Card(
+
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(quote.text),
+            SizedBox(height: 10.0,),
+            Text(quote.author),
+          ],
+
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.cyan.shade50,
-      appBar: AppBar(title: const Text("Today Quotes"),centerTitle: true,backgroundColor: Colors.grey.shade800,elevation: 30),
+      appBar: AppBar(title: const Text("Today Quotes"),
+          centerTitle: true,
+          backgroundColor: Colors.grey.shade800,
+          elevation: 30),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: quotes.map((quote) => Text('${quote.text} -- ${quote.author}'  )).toList()
+          children: quotes.map((quote) => quotes_Card(quote)).toList(),
         ),
       ),
     );
+
   }
 }
-
 
